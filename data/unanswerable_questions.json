@@ -1,0 +1,53 @@
+[
+  {
+    "id": "u01",
+    "split": "dev",
+    "question": "What specific administrative fine percentages of global annual turnover does NIST AI 100-1 impose on organizations that fail to comply with the GOVERN function?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "NIST AI 100-1 (AI RMF 1.0) is explicitly a voluntary, non-sector-specific, law- and regulation-agnostic framework (page 6: 'The Framework is voluntary'). Full-corpus search across all 362 chunks (95 pages) for 'annual turnover', 'administrative fine', or monetary penalty percentages yields 0 occurrences.",
+    "forbidden_terms_check": [
+      "annual turnover",
+      "administrative fine",
+      "fine percentage"
+    ]
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "question": "According to NIST AI 600-1, what is the mandatory minimum training compute threshold in FLOPs (such as 10^26 FLOPs) that triggers federal registration for frontier generative AI models?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "While NIST AI 600-1 discusses compute resources and environmental impacts of training GAI models, it does not specify any mandatory FLOPs compute threshold (e.g., 10^26 FLOPs) or federal registration mandates. Full-corpus scan across all 362 chunks for 'FLOP', '10^26', or 'federal registration' yields 0 matches.",
+    "forbidden_terms_check": [
+      "10^26",
+      "federal registration",
+      "flops"
+    ]
+  },
+  {
+    "id": "u03",
+    "split": "test",
+    "question": "What is the official fee schedule in USD and certificate validity period in years for obtaining an accredited NIST AI RMF 1.0 compliance certification from the U.S. Department of Commerce?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Neither NIST AI 100-1 nor NIST AI 600-1 establishes a paid compliance certification program, fee schedule in USD, or certificate validity period from the U.S. Department of Commerce. Full-corpus scan across all 362 chunks for 'fee schedule', 'validity period', or 'compliance certification' yields 0 matches.",
+    "forbidden_terms_check": [
+      "fee schedule",
+      "validity period",
+      "compliance certification"
+    ]
+  },
+  {
+    "id": "u04",
+    "split": "test",
+    "question": "In NIST AI 600-1, what exact minimum benchmark percentage scores on MMLU and GSM8K are mandated before a generative AI model is permitted for clinical healthcare deployment?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "NIST AI 600-1 discusses TEVV benchmarks and measurement error models generally (e.g., MEASURE 2.5 and 2.13), but never mentions 'MMLU' or 'GSM8K' nor mandates fixed benchmark score cutoffs for clinical healthcare deployment. Full-corpus scan across all 362 chunks for 'MMLU' or 'GSM8K' yields 0 matches.",
+    "forbidden_terms_check": [
+      "mmlu",
+      "gsm8k"
+    ]
+  }
+]
