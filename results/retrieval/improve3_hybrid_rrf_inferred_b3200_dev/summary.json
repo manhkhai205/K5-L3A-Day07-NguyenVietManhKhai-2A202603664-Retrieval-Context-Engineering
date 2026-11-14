@@ -1,0 +1,23 @@
+{
+  "config_name": "improve3_hybrid_rrf_inferred_b3200",
+  "label": "Cải thiện 3 (Hybrid RRF + Inferred Filter + Neighbor Expand, budget=3200)",
+  "strategy": "hybrid_rrf",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "inferred",
+  "budget_chars": 3200,
+  "neighbor_expand": true,
+  "hypothesis": "Suy luận thêm filter year/section tất định từ câu hỏi (ví dụ câu q19 thuộc 600-1) và ghép thêm chunk lân cận cùng trang sau top-3 với budget 3200 ký tự.",
+  "n": 20,
+  "hit1": 16,
+  "hit1_rate": 0.8,
+  "hit3": 19,
+  "hit3_rate": 0.95,
+  "mrr3": 0.8583,
+  "context_hit": 19,
+  "context_evidence_rate": 0.95,
+  "avg_context_chars": 2685.9,
+  "median_ms": 22.194,
+  "total_ms": 427.42,
+  "service_cost_usd": 0.0
+}

@@ -1,0 +1,23 @@
+{
+  "config_name": "improve1_dense_qdrant_b2400",
+  "label": "Cải thiện 1 (Dense Qdrant + provided filter + Context Budget 2400)",
+  "strategy": "dense_qdrant",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "provided",
+  "budget_chars": 2400,
+  "neighbor_expand": false,
+  "hypothesis": "Tăng context budget từ 800 lên 2400 ký tự để khắc phục lỗi chunk Chiến lược B (dài 650-900 ký tự + header) bị loại khỏi context.",
+  "n": 20,
+  "hit1": 17,
+  "hit1_rate": 0.85,
+  "hit3": 18,
+  "hit3_rate": 0.9,
+  "mrr3": 0.875,
+  "context_hit": 18,
+  "context_evidence_rate": 0.9,
+  "avg_context_chars": 1961.6,
+  "median_ms": 22.343,
+  "total_ms": 393.28,
+  "service_cost_usd": 0.0
+}

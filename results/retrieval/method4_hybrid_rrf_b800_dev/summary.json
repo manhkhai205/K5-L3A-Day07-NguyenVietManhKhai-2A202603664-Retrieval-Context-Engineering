@@ -1,0 +1,23 @@
+{
+  "config_name": "method4_hybrid_rrf_b800",
+  "label": "Phương pháp 4 (Hybrid Dense+BM25 RRF + provided filter, budget=800)",
+  "strategy": "hybrid_rrf",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "provided",
+  "budget_chars": 800,
+  "neighbor_expand": false,
+  "hypothesis": "Kết hợp Dense Qdrant và BM25 bằng Reciprocal Rank Fusion (RRF, k=60) để vừa bắt ngữ nghĩa vừa bắt từ khóa/mã mục hiếm.",
+  "n": 20,
+  "hit1": 15,
+  "hit1_rate": 0.75,
+  "hit3": 18,
+  "hit3_rate": 0.9,
+  "mrr3": 0.8083,
+  "context_hit": 3,
+  "context_evidence_rate": 0.15,
+  "avg_context_chars": 396.2,
+  "median_ms": 31.626,
+  "total_ms": 537.98,
+  "service_cost_usd": 0.0
+}

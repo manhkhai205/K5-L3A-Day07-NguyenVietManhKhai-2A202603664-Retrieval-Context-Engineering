@@ -1,0 +1,23 @@
+{
+  "config_name": "baseline_tfidf_b800",
+  "label": "Baseline (TF-IDF, top_k=3, no filter, budget=800)",
+  "strategy": "tfidf",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "none",
+  "budget_chars": 800,
+  "neighbor_expand": false,
+  "hypothesis": "Baseline lexical TF-IDF từ starter với context budget 800 ký tự mặc định.",
+  "n": 20,
+  "hit1": 14,
+  "hit1_rate": 0.7,
+  "hit3": 17,
+  "hit3_rate": 0.85,
+  "mrr3": 0.7667,
+  "context_hit": 3,
+  "context_evidence_rate": 0.15,
+  "avg_context_chars": 428.6,
+  "median_ms": 0.998,
+  "total_ms": 20.3,
+  "service_cost_usd": 0.0
+}

@@ -1,0 +1,23 @@
+{
+  "config_name": "improve2_hybrid_rrf_b2400",
+  "label": "Cải thiện 2 (Hybrid RRF + provided filter + Context Budget 2400)",
+  "strategy": "hybrid_rrf",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "provided",
+  "budget_chars": 2400,
+  "neighbor_expand": false,
+  "hypothesis": "Kết hợp Hybrid RRF với Context Budget 2400 để tối ưu đồng thời Hit@1, Evidence Hit@3 và Context Evidence Rate.",
+  "n": 20,
+  "hit1": 15,
+  "hit1_rate": 0.75,
+  "hit3": 18,
+  "hit3_rate": 0.9,
+  "mrr3": 0.8083,
+  "context_hit": 17,
+  "context_evidence_rate": 0.85,
+  "avg_context_chars": 1892.5,
+  "median_ms": 21.873,
+  "total_ms": 463.76,
+  "service_cost_usd": 0.0
+}

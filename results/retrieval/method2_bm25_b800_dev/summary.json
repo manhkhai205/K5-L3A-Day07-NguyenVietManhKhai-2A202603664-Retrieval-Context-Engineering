@@ -1,0 +1,23 @@
+{
+  "config_name": "method2_bm25_b800",
+  "label": "Phương pháp 2 (BM25 + domain codes + provided filter, budget=800)",
+  "strategy": "bm25",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "provided",
+  "budget_chars": 800,
+  "neighbor_expand": false,
+  "hypothesis": "BM25 chuẩn hóa độ dài chunk và giữ mã hành động NIST (MS-2.5, MG-3.1) kết hợp filter được cung cấp.",
+  "n": 20,
+  "hit1": 14,
+  "hit1_rate": 0.7,
+  "hit3": 17,
+  "hit3_rate": 0.85,
+  "mrr3": 0.775,
+  "context_hit": 3,
+  "context_evidence_rate": 0.15,
+  "avg_context_chars": 560.4,
+  "median_ms": 1.324,
+  "total_ms": 24.03,
+  "service_cost_usd": 0.0
+}

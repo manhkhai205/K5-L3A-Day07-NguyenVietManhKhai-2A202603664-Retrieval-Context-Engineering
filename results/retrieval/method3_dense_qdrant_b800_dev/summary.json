@@ -1,0 +1,23 @@
+{
+  "config_name": "method3_dense_qdrant_b800",
+  "label": "Phương pháp 3 (Dense Qdrant Day 6 + provided filter, budget=800)",
+  "strategy": "dense_qdrant",
+  "split": "dev",
+  "top_k": 3,
+  "filter_mode": "provided",
+  "budget_chars": 800,
+  "neighbor_expand": false,
+  "hypothesis": "Dense retrieval dùng gemini-embedding-2 (768d) trên Qdrant Day 6 giúp bắt ngữ nghĩa câu hỏi diễn đạt lại tốt hơn lexical.",
+  "n": 20,
+  "hit1": 17,
+  "hit1_rate": 0.85,
+  "hit3": 18,
+  "hit3_rate": 0.9,
+  "mrr3": 0.875,
+  "context_hit": 4,
+  "context_evidence_rate": 0.2,
+  "avg_context_chars": 411.9,
+  "median_ms": 14.889,
+  "total_ms": 339.68,
+  "service_cost_usd": 0.0
+}
