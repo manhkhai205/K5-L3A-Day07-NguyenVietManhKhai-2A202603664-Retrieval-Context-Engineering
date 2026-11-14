@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 import json
 import math
 import os
@@ -11,6 +12,7 @@ import sys
 import time
 from typing import Any
 import unicodedata
+import uuid
 
 from google import genai
 from google.genai import types
@@ -232,12 +234,98 @@ class DenseQdrantRetriever:
         qdrant_url: str = "http://127.0.0.1:6333",
         collection_name: str = "day6_nist_chunks",
         qdrant_strategy: str = "B",
+        local_path: Path | None = None,
+        chunks_fallback_path: Path | None = None,
     ) -> None:
         self.embedder = embedder
         self.qdrant_url = qdrant_url
         self.collection_name = collection_name
         self.qdrant_strategy = qdrant_strategy
-        self.client = QdrantClient(url=qdrant_url, timeout=30.0)
+        self.local_path = local_path or (REPO_ROOT / "results" / "cache" / "qdrant_local")
+        self.chunks_fallback_path = chunks_fallback_path or (REPO_ROOT / "data" / "chunks.json")
+        self.client = self._connect_or_init_local()
+
+    def _connect_or_init_local(self) -> QdrantClient:
+        try:
+            remote = QdrantClient(url=self.qdrant_url, timeout=3.0, check_compatibility=False)
+            remote.get_collection(self.collection_name)
+            return remote
+        except Exception:
+            self.local_path.mkdir(parents=True, exist_ok=True)
+            local_client = QdrantClient(path=str(self.local_path))
+            existing = {c.name for c in local_client.get_collections().collections}
+            need_populate = self.collection_name not in existing
+            if not need_populate:
+                cnt = local_client.count(collection_name=self.collection_name).count
+                need_populate = cnt == 0
+            if need_populate:
+                self._populate_local_qdrant(local_client)
+            return local_client
+
+    def _populate_local_qdrant(self, client: QdrantClient) -> None:
+        chunks = json.loads(self.chunks_fallback_path.read_text(encoding="utf-8"))
+        existing = {c.name for c in client.get_collections().collections}
+        if self.collection_name not in existing:
+            client.create_collection(
+                collection_name=self.collection_name,
+                vectors_config=models.VectorParams(
+                    size=self.embedder.dimensions,
+                    distance=models.Distance.COSINE,
+                ),
+            )
+        doc_cache_path = REPO_ROOT / "results" / "cache" / "doc_embeddings_b.json"
+        doc_vecs: dict[str, list[float]] = {}
+        if doc_cache_path.exists():
+            doc_vecs = json.loads(doc_cache_path.read_text(encoding="utf-8"))
+
+        missing_chunks = [c for c in chunks if c["id"] not in doc_vecs]
+        if missing_chunks:
+            print(f"Embedding {len(missing_chunks)} Day 6 chunks with {self.embedder.model_name} for local Qdrant...")
+
+            def _embed_one(ch: dict[str, Any]) -> tuple[str, list[float]]:
+                for attempt in range(4):
+                    try:
+                        resp = self.embedder.client.models.embed_content(
+                            model=self.embedder.model_name,
+                            contents=ch["text"],
+                            config=types.EmbedContentConfig(
+                                task_type="RETRIEVAL_DOCUMENT",
+                                output_dimensionality=self.embedder.dimensions,
+                            ),
+                        )
+                        return ch["id"], [float(v) for v in resp.embeddings[0].values]
+                    except Exception:
+                        if attempt == 3:
+                            raise
+                        time.sleep(1.0 * (attempt + 1))
+                raise RuntimeError("Unreachable")
+
+            with ThreadPoolExecutor(max_workers=6) as pool:
+                for cid, vec in pool.map(_embed_one, missing_chunks):
+                    doc_vecs[cid] = vec
+            doc_cache_path.parent.mkdir(parents=True, exist_ok=True)
+            doc_cache_path.write_text(json.dumps(doc_vecs), encoding="utf-8")
+
+        points = []
+        for ch in chunks:
+            point_id = str(uuid.uuid5(uuid.NAMESPACE_URL, f"{self.qdrant_strategy}:{ch['id']}"))
+            payload = {
+                "strategy": self.qdrant_strategy,
+                "chunk_id": ch["id"],
+                "document_id": ch["source_id"],
+                "source": ch["source"],
+                "page": int(ch["page"]),
+                "text": ch["text"],
+                **ch.get("metadata", {}),
+            }
+            points.append(models.PointStruct(id=point_id, vector=doc_vecs[ch["id"]], payload=payload))
+
+        for start in range(0, len(points), 100):
+            client.upsert(
+                collection_name=self.collection_name,
+                points=points[start : start + 100],
+                wait=True,
+            )
 
     def search(
         self,

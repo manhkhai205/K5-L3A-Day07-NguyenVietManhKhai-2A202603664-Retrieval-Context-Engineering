@@ -1,0 +1,27 @@
+{
+  "config_name": "agent_improve2_hybrid_smart_b3200",
+  "label": "Agent Cải thiện 2 / Đã chọn (Hybrid RRF + inferred filter + neighbor expand + budget=3200, max_searches=3)",
+  "split": "dev",
+  "model": "gemini-3.8-flash",
+  "total_cases": 22,
+  "answerable_cases": 20,
+  "unanswerable_cases": 2,
+  "provider_errors": 0,
+  "tool_use_count": 22,
+  "search_count_distribution": {
+    "1": 21,
+    "3": 1
+  },
+  "avg_searches_per_case": 1.09,
+  "context_evidence_hit_count": 20,
+  "context_evidence_rate": 1.0,
+  "answered_on_answerable": 20,
+  "false_abstention_on_answerable": 0,
+  "abstained_on_unanswerable": 2,
+  "median_ms": 7984.7,
+  "total_sec": 183.27,
+  "total_llm_calls": 46,
+  "total_prompt_tokens": 41042,
+  "total_completion_tokens": 8724,
+  "service_cost_usd": 0.0
+}

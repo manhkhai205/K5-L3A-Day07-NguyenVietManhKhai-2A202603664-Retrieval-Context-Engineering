@@ -1,0 +1,27 @@
+{
+  "config_name": "agent_baseline_tfidf_b800",
+  "label": "Agent Baseline (starter loop + TF-IDF, top_k=3, no filter, budget=800, max_searches=3)",
+  "split": "test",
+  "model": "gemini-3.8-flash",
+  "total_cases": 7,
+  "answerable_cases": 5,
+  "unanswerable_cases": 2,
+  "provider_errors": 0,
+  "tool_use_count": 7,
+  "search_count_distribution": {
+    "2": 2,
+    "3": 5
+  },
+  "avg_searches_per_case": 2.71,
+  "context_evidence_hit_count": 0,
+  "context_evidence_rate": 0.0,
+  "answered_on_answerable": 1,
+  "false_abstention_on_answerable": 4,
+  "abstained_on_unanswerable": 2,
+  "median_ms": 12207.9,
+  "total_sec": 87.61,
+  "total_llm_calls": 26,
+  "total_prompt_tokens": 16491,
+  "total_completion_tokens": 2817,
+  "service_cost_usd": 0.0
+}

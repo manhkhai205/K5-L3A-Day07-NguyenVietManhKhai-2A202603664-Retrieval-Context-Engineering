@@ -1,0 +1,76 @@
+{
+  "split": "test",
+  "scale": "0 = no evidence; 1 = evidence present but missing conditions or source; 2 = sufficient evidence and source",
+  "baseline_tfidf_b800_test": {
+    "counts": {"0": 4, "1": 1, "2": 0},
+    "mean": 0.2,
+    "items": [
+      {
+        "query_id": "q21",
+        "grade": 0,
+        "context_ids": [],
+        "reason": "Context is empty (0 chars) because all top-3 chunks exceeded budget=800 chars."
+      },
+      {
+        "query_id": "q22",
+        "grade": 1,
+        "context_ids": ["nist_ai_100_1:B:p22:c003"],
+        "reason": "Contains only p22:c003 (PETs accuracy loss under data sparsity); missing p17:c003 (why individual characteristics fail)."
+      },
+      {
+        "query_id": "q23",
+        "grade": 0,
+        "context_ids": ["nist_ai_600_1:B:p37:c004"],
+        "reason": "Only contains MS-2.7-007 red-teaming chunk; gold chunk p15:c002 (797 chars + header) was dropped by budget=800."
+      },
+      {
+        "query_id": "q24",
+        "grade": 0,
+        "context_ids": [],
+        "reason": "Context is empty (0 chars) because all top-3 chunks exceeded budget=800 chars."
+      },
+      {
+        "query_id": "q25",
+        "grade": 0,
+        "context_ids": ["nist_ai_600_1:B:p16:c005"],
+        "reason": "Only contains general subcategory note; gold chunk p42:c001 (898 chars) was dropped by budget=800."
+      }
+    ]
+  },
+  "improve3_hybrid_rrf_inferred_b3200_test": {
+    "counts": {"0": 0, "1": 0, "2": 5},
+    "mean": 2.0,
+    "items": [
+      {
+        "query_id": "q21",
+        "grade": 2,
+        "context_ids": ["nist_ai_100_1:B:p08:c001", "nist_ai_100_1:B:p17:c002", "nist_ai_100_1:B:p17:c001"],
+        "reason": "Includes gold chunk p17:c002 with full Figure 4 explanation, source DOI, and page 17."
+      },
+      {
+        "query_id": "q22",
+        "grade": 2,
+        "context_ids": ["nist_ai_100_1:B:p17:c003", "nist_ai_100_1:B:p22:c003", "nist_ai_100_1:B:p17:c001"],
+        "reason": "Includes both p17:c003 (tradeoffs & individual limits) and p22:c003 (PETs & data sparsity) with source and pages."
+      },
+      {
+        "query_id": "q23",
+        "grade": 2,
+        "context_ids": ["nist_ai_600_1:B:p15:c002", "nist_ai_600_1:B:p37:c004", "nist_ai_600_1:B:p14:c004", "nist_ai_600_1:B:p15:c001", "nist_ai_600_1:B:p15:c003"],
+        "reason": "Includes gold chunk p15:c002 (plus adjacent context) with full direct/indirect prompt injection distinction and source."
+      },
+      {
+        "query_id": "q24",
+        "grade": 2,
+        "context_ids": ["nist_ai_600_1:B:p28:c001", "nist_ai_600_1:B:p29:c002", "nist_ai_600_1:B:p29:c001"],
+        "reason": "Includes gold chunk p29:c001 containing both MP-2.3-003 and MP-2.3-004 with source and page 29."
+      },
+      {
+        "query_id": "q25",
+        "grade": 2,
+        "context_ids": ["nist_ai_600_1:B:p42:c001", "nist_ai_100_1:B:p35:c002", "nist_ai_600_1:B:p35:c001"],
+        "reason": "Includes gold chunk p42:c001 containing full MEASURE 2.13 / MS-2.13-001 guidance with source and page 42."
+      }
+    ]
+  }
+}

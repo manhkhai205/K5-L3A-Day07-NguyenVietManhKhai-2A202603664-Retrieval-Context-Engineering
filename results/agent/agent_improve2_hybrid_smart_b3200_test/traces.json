@@ -1,0 +1,780 @@
+[
+  {
+    "query_id": "q21",
+    "split": "test",
+    "question": "In Figure 4 of the NIST AI RMF 1.0, why is Valid & Reliable shown as the base and Accountable & Transparent shown as a vertical box?",
+    "answerable": true,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "In Figure 4 of NIST AI RMF 1.0, \"Valid & Reliable\" is shown as the base because it is a necessary condition of trustworthiness for the other trustworthiness characteristics [nist_ai_100_1:B:p17:c002]. \"Accountable & Transparent\" is depicted as a vertical box because it relates to all other characteristics [nist_ai_100_1:B:p17:c002].",
+    "citations": [
+      "nist_ai_100_1:B:p17:c002"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_100_1:B:p17:c002",
+      "nist_ai_100_1:B:p17:c001",
+      "nist_ai_100_1:B:p18:c004"
+    ],
+    "final_context_chars": 2607,
+    "context_evidence_hit": true,
+    "elapsed_ms": 6954.36,
+    "llm_calls": 2,
+    "prompt_tokens": 1663,
+    "completion_tokens": 308,
+    "events": [
+      {
+        "event": "search",
+        "query": "Figure 4 characteristics of trustworthy AI systems base vertical box Valid and Reliable Accountable and Transparent",
+        "thought": "I need to find the explanation in NIST AI RMF 1.0 regarding Figure 4 and why 'Valid & Reliable' is depicted as the base and 'Accountable & Transparent' is depicted as a vertical box.",
+        "filter": {
+          "year": 2023
+        },
+        "results": [
+          {
+            "id": "nist_ai_100_1:B:p17:c002",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 17,
+            "text": "Neglecting these characteristics can increase the probability and magnitude of negative consequences.\nFig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and organizational behavior, the datasets used by AI systems, selection of AI models and algorithms and the decisions made by those who build them, and the interactions with the humans who provide insight from and oversight of such systems. Human judgment should be employed when deciding on the specific metrics related to AI trustworthiness characteristics and the precise threshold values for those metrics.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p17",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.86228,
+                "lexical_rank": 1,
+                "lexical_score": 38.510033
+              }
+            },
+            "score": 0.038525,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p17:c001",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 17,
+            "text": "3. AI Risks and Trustworthiness For AI systems to be trustworthy, they often need to be responsive to a multiplicity of criteria that are of value to interested parties. Approaches which enhance AI trustworthiness can reduce negative AI risks. This Framework articulates the following characteristics of trustworthy AI and offers guidance for addressing them. Characteristics of trustworthy AI systems include: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. Creating trustworthy AI requires balancing each of these characteristics based on the AI system’s context of use. While all characteristics are socio-technical system attributes, accountability and transparency also relate to the processes and activities internal to an AI system and its external setting.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p17",
+              "rrf_detail": {
+                "dense_rank": 2,
+                "dense_score": 0.824552,
+                "lexical_rank": 2,
+                "lexical_score": 20.587036
+              }
+            },
+            "score": 0.037903,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p18:c004",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 18,
+            "text": "The decision to commission or deploy an AI system should be based on a contextual assessment of trustworthiness characteristics and the relative risks, impacts, costs, and benefits, and informed by a broad set of interested parties.\n3.1 Valid and Reliable Validation is the “confirmation, through the provision of objective evidence, that the requirements for a specific intended use or application have been fulfilled” (Source: ISO 9000:2015). Deployment of AI systems which are inaccurate, unreliable, or poorly generalized to data and settings beyond their training creates and increases negative AI risks and reduces trustworthiness.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p18",
+              "rrf_detail": {
+                "dense_rank": 5,
+                "dense_score": 0.795174,
+                "lexical_rank": 6,
+                "lexical_score": 10.232289
+              }
+            },
+            "score": 0.035921,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_100_1:B:p17:c002 | starter/data/NIST.AI.100-1.pdf | page 17]\nNeglecting these characteristics can increase the probability and magnitude of negative consequences.\nFig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and organizational behavior, the datasets used by AI systems, selection of AI models and algorithms and the decisions made by those who build them, and the interactions with the humans who provide insight from and oversight of such systems. Human judgment should be employed when deciding on the specific metrics related to AI trustworthiness characteristics and the precise threshold values for those metrics.\n\n[nist_ai_100_1:B:p17:c001 | starter/data/NIST.AI.100-1.pdf | page 17]\n3. AI Risks and Trustworthiness For AI systems to be trustworthy, they often need to be responsive to a multiplicity of criteria that are of value to interested parties. Approaches which enhance AI trustworthiness can reduce negative AI risks. This Framework articulates the following characteristics of trustworthy AI and offers guidance for addressing them. Characteristics of trustworthy AI systems include: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. Creating trustworthy AI requires balancing each of these characteristics based on the AI system’s context of use. While all characteristics are socio-technical system attributes, accountability and transparency also relate to the processes and activities internal to an AI system and its external setting.\n\n[nist_ai_100_1:B:p18:c004 | starter/data/NIST.AI.100-1.pdf | page 18]\nThe decision to commission or deploy an AI system should be based on a contextual assessment of trustworthiness characteristics and the relative risks, impacts, costs, and benefits, and informed by a broad set of interested parties.\n3.1 Valid and Reliable Validation is the “confirmation, through the provision of objective evidence, that the requirements for a specific intended use or application have been fulfilled” (Source: ISO 9000:2015). Deployment of AI systems which are inaccurate, unreliable, or poorly generalized to data and settings beyond their training creates and increases negative AI risks and reduces trustworthiness.",
+        "context_ids": [
+          "nist_ai_100_1:B:p17:c002",
+          "nist_ai_100_1:B:p17:c001",
+          "nist_ai_100_1:B:p18:c004"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The retrieved chunk nist_ai_100_1:B:p17:c002 directly explains why Valid & Reliable is shown as the base and Accountable & Transparent is shown as a vertical box in Figure 4."
+      }
+    ]
+  },
+  {
+    "query_id": "q22",
+    "split": "test",
+    "question": "Why does addressing AI trustworthiness characteristics individually fail to ensure trustworthiness, and what tradeoff can occur when applying privacy-enhancing techniques under data sparsity?",
+    "answerable": true,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "Addressing AI trustworthiness characteristics individually will not ensure AI system trustworthiness because tradeoffs are usually involved, rarely do all characteristics apply in every setting, and some characteristics will be more or less important depending on the specific situation [nist_ai_100_1:B:p17:c003]. Furthermore, trustworthiness is a social concept that spans a spectrum and is only as strong as its weakest characteristics [nist_ai_100_1:B:p17:c003].\n\nUnder certain conditions such as data sparsity, applying privacy-enhancing techniques can result in a loss of accuracy, which in turn can affect decisions about fairness and other values in certain domains [nist_ai_100_1:B:p17:c003, nist_ai_100_1:B:p22:c003]. [nist_ai_100_1:B:p22:c003]",
+    "citations": [
+      "nist_ai_100_1:B:p17:c003",
+      "nist_ai_100_1:B:p22:c003"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_100_1:B:p17:c003",
+      "nist_ai_100_1:B:p22:c003",
+      "nist_ai_100_1:B:p18:c003"
+    ],
+    "final_context_chars": 2396,
+    "context_evidence_hit": true,
+    "elapsed_ms": 9268.18,
+    "llm_calls": 2,
+    "prompt_tokens": 1590,
+    "completion_tokens": 388,
+    "events": [
+      {
+        "event": "search",
+        "query": "addressing AI trustworthiness characteristics individually trade-offs privacy-enhancing techniques data sparsity",
+        "thought": "I need to search NIST AI 100-1 for discussions on why addressing trustworthiness characteristics individually does not guarantee overall trustworthiness and the tradeoffs associated with privacy-enhancing techniques under data sparsity.",
+        "filter": null,
+        "results": [
+          {
+            "id": "nist_ai_100_1:B:p17:c003",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 17,
+            "text": "Addressing AI trustworthiness characteristics individually will not ensure AI system trustworthiness; tradeoffs are usually involved, rarely do all characteristics apply in every setting, and some will be more or less important in any given situation. Ultimately, trustworthiness is a social concept that ranges across a spectrum and is only as strong as its weakest characteristics.\nWhen managing AI risks, organizations can face difficult decisions in balancing these characteristics. For example, in certain scenarios tradeoffs may emerge between optimizing for interpretability and achieving privacy. In other cases, organizations might face a tradeoff between predictive accuracy and interpretability. Or, under certain conditions such as data sparsity, privacy-enhancing techniques can result in a loss in accuracy, affecting decisions",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p17",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.867814,
+                "lexical_rank": 1,
+                "lexical_score": 29.805541
+              }
+            },
+            "score": 0.038525,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p22:c003",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 22,
+            "text": "AI systems can also present new risks to privacy by allowing inference to identify individuals or previously private information about individuals.\nPrivacy-enhancing technologies (“PETs”) for AI, as well as data minimizing methods such as de-identification and aggregation for certain model outputs, can support design for privacy-enhanced AI systems. Under certain conditions such as data sparsity, privacyenhancing techniques can result in a loss in accuracy, affecting decisions about fairness and other values in certain domains.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p22",
+              "rrf_detail": {
+                "dense_rank": 3,
+                "dense_score": 0.809894,
+                "lexical_rank": 2,
+                "lexical_score": 17.72166
+              }
+            },
+            "score": 0.037558,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p18:c003",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 18,
+            "text": "Understanding and treatment of trustworthiness characteristics depends on an AI actor’s particular role within the AI lifecycle. For any given AI system, an AI designer or developer may have a different perception of the characteristics than the deployer. Trustworthiness characteristics explained in this document influence each other. Highly secure but unfair systems, accurate but opaque and uninterpretable systems, and inaccurate but secure, privacy-enhanced, and transparent systems are all undesirable. A comprehensive approach to risk management calls for balancing tradeoffs among the trustworthiness characteristics. It is the joint responsibility of all AI actors to determine whether AI technology is an appropriate or necessary tool for a given context or purpose, and how to use it responsibly.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p18",
+              "rrf_detail": {
+                "dense_rank": 2,
+                "dense_score": 0.818855,
+                "lexical_rank": 5,
+                "lexical_score": 9.36038
+              }
+            },
+            "score": 0.037159,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_100_1:B:p17:c003 | starter/data/NIST.AI.100-1.pdf | page 17]\nAddressing AI trustworthiness characteristics individually will not ensure AI system trustworthiness; tradeoffs are usually involved, rarely do all characteristics apply in every setting, and some will be more or less important in any given situation. Ultimately, trustworthiness is a social concept that ranges across a spectrum and is only as strong as its weakest characteristics.\nWhen managing AI risks, organizations can face difficult decisions in balancing these characteristics. For example, in certain scenarios tradeoffs may emerge between optimizing for interpretability and achieving privacy. In other cases, organizations might face a tradeoff between predictive accuracy and interpretability. Or, under certain conditions such as data sparsity, privacy-enhancing techniques can result in a loss in accuracy, affecting decisions\n\n[nist_ai_100_1:B:p22:c003 | starter/data/NIST.AI.100-1.pdf | page 22]\nAI systems can also present new risks to privacy by allowing inference to identify individuals or previously private information about individuals.\nPrivacy-enhancing technologies (“PETs”) for AI, as well as data minimizing methods such as de-identification and aggregation for certain model outputs, can support design for privacy-enhanced AI systems. Under certain conditions such as data sparsity, privacyenhancing techniques can result in a loss in accuracy, affecting decisions about fairness and other values in certain domains.\n\n[nist_ai_100_1:B:p18:c003 | starter/data/NIST.AI.100-1.pdf | page 18]\nUnderstanding and treatment of trustworthiness characteristics depends on an AI actor’s particular role within the AI lifecycle. For any given AI system, an AI designer or developer may have a different perception of the characteristics than the deployer. Trustworthiness characteristics explained in this document influence each other. Highly secure but unfair systems, accurate but opaque and uninterpretable systems, and inaccurate but secure, privacy-enhanced, and transparent systems are all undesirable. A comprehensive approach to risk management calls for balancing tradeoffs among the trustworthiness characteristics. It is the joint responsibility of all AI actors to determine whether AI technology is an appropriate or necessary tool for a given context or purpose, and how to use it responsibly.",
+        "context_ids": [
+          "nist_ai_100_1:B:p17:c003",
+          "nist_ai_100_1:B:p22:c003",
+          "nist_ai_100_1:B:p18:c003"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The retrieved chunks explicitly explain why addressing AI trustworthiness characteristics individually will not ensure trustworthiness, and specifically detail the tradeoff regarding privacy-enhancing techniques under data sparsity."
+      }
+    ]
+  },
+  {
+    "query_id": "q23",
+    "split": "test",
+    "question": "How do direct prompt injections differ from indirect prompt injection attacks against LLM-integrated applications in NIST AI 600-1?",
+    "answerable": true,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "According to NIST AI 600-1, direct and indirect prompt injection attacks differ in how the malicious input reaches the system and the interface exploited:\n\n- In **direct prompt injections**, attackers craft malicious prompts and input them directly into a generative AI (GAI) system, leading to a variety of downstream negative consequences for interconnected systems [nist_ai_600_1:B:p15:c002].\n- In **indirect prompt injection attacks**, adversaries remotely exploit LLM-integrated applications without using a direct interface by injecting prompts into data that is likely to be retrieved by the system [nist_ai_600_1:B:p15:c002]. Security researchers have demonstrated that indirect prompt injections can exploit vulnerabilities to steal proprietary data or run malicious code remotely on a machine [nist_ai_600_1:B:p15:c002].",
+    "citations": [
+      "nist_ai_600_1:B:p15:c002"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_600_1:B:p15:c002",
+      "nist_ai_600_1:B:p37:c004",
+      "nist_ai_600_1:B:p14:c004",
+      "nist_ai_600_1:B:p15:c001",
+      "nist_ai_600_1:B:p15:c003"
+    ],
+    "final_context_chars": 3152,
+    "context_evidence_hit": true,
+    "elapsed_ms": 9992.23,
+    "llm_calls": 2,
+    "prompt_tokens": 1873,
+    "completion_tokens": 383,
+    "events": [
+      {
+        "event": "search",
+        "query": "direct prompt injection indirect prompt injection LLM",
+        "thought": "The user is asking about the difference between direct and indirect prompt injection attacks against LLM-integrated applications in NIST AI 600-1. I must query the corpus for direct and indirect prompt injection.",
+        "filter": {
+          "year": 2024
+        },
+        "results": [
+          {
+            "id": "nist_ai_600_1:B:p15:c002",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 15,
+            "text": "For instance, prompt injection involves modifying what input is provided to a GAI system so that it behaves in unintended ways. In direct prompt injections, attackers might craft malicious prompts and input them directly to a GAI system, with a variety of downstream negative consequences to interconnected systems. Indirect prompt injection attacks occur when adversaries remotely (i.e., without a direct interface) exploit LLM-integrated applications by injecting prompts into data likely to be retrieved. Security researchers have already demonstrated how indirect prompt injections can exploit vulnerabilities by stealing proprietary data or running malicious code remotely on a machine. Merely querying a closed production model can elicit previously undisclosed information about that model.",
+            "metadata": {
+              "section": "gai_risks",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p15",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.839563,
+                "lexical_rank": 1,
+                "lexical_score": 41.513816
+              }
+            },
+            "score": 0.038525,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p37:c004",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 37,
+            "text": "MS-2.7-007 Perform AI red-teaming to assess resilience against: Abuse to facilitate attacks on other systems (e.g., malicious code generation, enhanced phishing content), GAI attacks (e.g., prompt injection), ML attacks (e.g., adversarial examples/prompts, data poisoning, membership inference, model extraction, sponge examples). Information Security; Harmful Bias and Homogenization; Dangerous, Violent, or Hateful Content\nMS-2.7-008 Verify fine-tuning does not compromise safety and security controls. Information Integrity; Information Security; Dangerous, Violent, or Hateful Content",
+            "metadata": {
+              "section": "measure",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p37",
+              "rrf_detail": {
+                "dense_rank": 4,
+                "dense_score": 0.69668,
+                "lexical_rank": 3,
+                "lexical_score": 18.396042
+              }
+            },
+            "score": 0.036967,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p14:c004",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 14,
+            "text": "2.9. Information Security Information security for computer systems and data is a mature field with widely accepted and standardized practices for offensive and defensive cyber capabilities. GAI-based systems present two primary information security risks: GAI could potentially discover or enable new cybersecurity risks by lowering the barriers for or easing automated exercise of offensive capabilities; simultaneously, it expands the available attack surface, as GAI itself is vulnerable to attacks like prompt injection or data poisoning.",
+            "metadata": {
+              "section": "gai_risks",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p14",
+              "rrf_detail": {
+                "dense_rank": 5,
+                "dense_score": 0.690285,
+                "lexical_rank": 2,
+                "lexical_score": 19.056864
+              }
+            },
+            "score": 0.036898,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_600_1:B:p15:c002 | starter/data/NIST.AI.600-1.pdf | page 15]\nFor instance, prompt injection involves modifying what input is provided to a GAI system so that it behaves in unintended ways. In direct prompt injections, attackers might craft malicious prompts and input them directly to a GAI system, with a variety of downstream negative consequences to interconnected systems. Indirect prompt injection attacks occur when adversaries remotely (i.e., without a direct interface) exploit LLM-integrated applications by injecting prompts into data likely to be retrieved. Security researchers have already demonstrated how indirect prompt injections can exploit vulnerabilities by stealing proprietary data or running malicious code remotely on a machine. Merely querying a closed production model can elicit previously undisclosed information about that model.\n\n[nist_ai_600_1:B:p37:c004 | starter/data/NIST.AI.600-1.pdf | page 37]\nMS-2.7-007 Perform AI red-teaming to assess resilience against: Abuse to facilitate attacks on other systems (e.g., malicious code generation, enhanced phishing content), GAI attacks (e.g., prompt injection), ML attacks (e.g., adversarial examples/prompts, data poisoning, membership inference, model extraction, sponge examples). Information Security; Harmful Bias and Homogenization; Dangerous, Violent, or Hateful Content\nMS-2.7-008 Verify fine-tuning does not compromise safety and security controls. Information Integrity; Information Security; Dangerous, Violent, or Hateful Content\n\n[nist_ai_600_1:B:p14:c004 | starter/data/NIST.AI.600-1.pdf | page 14]\n2.9. Information Security Information security for computer systems and data is a mature field with widely accepted and standardized practices for offensive and defensive cyber capabilities. GAI-based systems present two primary information security risks: GAI could potentially discover or enable new cybersecurity risks by lowering the barriers for or easing automated exercise of offensive capabilities; simultaneously, it expands the available attack surface, as GAI itself is vulnerable to attacks like prompt injection or data poisoning.\n\n[nist_ai_600_1:B:p15:c001 | starter/data/NIST.AI.600-1.pdf | page 15]\nvalue chain (e.g., data inputs, processing, GAI training, or deployment environments), conventional cybersecurity practices may need to adapt or evolve.\n\n[nist_ai_600_1:B:p15:c003 | starter/data/NIST.AI.600-1.pdf | page 15]\nAnother cybersecurity risk to GAI is data poisoning, in which an adversary compromises a training dataset used by a model to manipulate its outputs or operation. Malicious tampering with data or parts of the model could exacerbate risks associated with GAI system outputs.\nTrustworthy AI Characteristics: Privacy Enhanced, Safe, Secure and Resilient, Valid and Reliable\n2.10. Intellectual Property Intellectual property risks from GAI systems may arise where the use of copyrighted works is not a fair use under the fair use doctrine. If a GAI system’s training data included copyrighted material, GAI outputs displaying instances of training data memorization (see Data Privacy above) could infringe on copyright.",
+        "context_ids": [
+          "nist_ai_600_1:B:p15:c002",
+          "nist_ai_600_1:B:p37:c004",
+          "nist_ai_600_1:B:p14:c004",
+          "nist_ai_600_1:B:p15:c001",
+          "nist_ai_600_1:B:p15:c003"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The retrieved chunk nist_ai_600_1:B:p15:c002 directly defines and contrasts direct prompt injections and indirect prompt injection attacks against LLM-integrated applications."
+      }
+    ]
+  },
+  {
+    "query_id": "q24",
+    "split": "test",
+    "question": "Within the 2024 Generative AI Profile MAP function, what actions are suggested under MP-2.3-003 and MP-2.3-004 to address Information Integrity risks?",
+    "answerable": true,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "Within the 2024 Generative AI Profile MAP function (specifically under MAP 2.3), the suggested actions to address Information Integrity risks are:\n\n- **MP-2.3-003**: \"Deploy and document fact-checking techniques to verify the accuracy and veracity of information generated by GAI systems, especially when the information comes from multiple (or unknown) sources\" [nist_ai_600_1:B:p29:c001].\n- **MP-2.3-004**: \"Develop and implement testing techniques to identify GAI produced content (e.g., synthetic media) that might be indistinguishable from human-generated content\" [nist_ai_600_1:B:p29:c001].",
+    "citations": [
+      "nist_ai_600_1:B:p29:c001"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_600_1:B:p29:c001",
+      "nist_ai_600_1:B:p28:c003",
+      "nist_ai_600_1:B:p28:c002",
+      "nist_ai_600_1:B:p29:c002"
+    ],
+    "final_context_chars": 3057,
+    "context_evidence_hit": true,
+    "elapsed_ms": 6861.01,
+    "llm_calls": 2,
+    "prompt_tokens": 1895,
+    "completion_tokens": 396,
+    "events": [
+      {
+        "event": "search",
+        "query": "MP-2.3-003 MP-2.3-004 Information Integrity",
+        "thought": "The user is asking about specific actions suggested under MP-2.3-003 and MP-2.3-004 in NIST AI 600-1 (Generative AI Profile) for Information Integrity. I need to search for these IDs.",
+        "filter": {
+          "year": 2024,
+          "section": "map"
+        },
+        "results": [
+          {
+            "id": "nist_ai_600_1:B:p29:c001",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 29,
+            "text": "MP-2.3-002 Review and document accuracy, representativeness, relevance, suitability of data used at different stages of AI life cycle.\nHarmful Bias and Homogenization; Intellectual Property\nMP-2.3-003 Deploy and document fact-checking techniques to verify the accuracy and veracity of information generated by GAI systems, especially when the information comes from multiple (or unknown) sources.\nInformation Integrity\nMP-2.3-004 Develop and implement testing techniques to identify GAI produced content (e.g., synthetic media) that might be indistinguishable from human-generated content. Information Integrity\nMP-2.3-005 Implement plans for GAI systems to undergo regular adversarial testing to identify vulnerabilities and potential manipulation or misuse. Information Security\nAI Actor Tasks: AI Development, Domain Experts, TEVV",
+            "metadata": {
+              "section": "map",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p29",
+              "rrf_detail": {
+                "dense_rank": 3,
+                "dense_score": 0.798062,
+                "lexical_rank": 1,
+                "lexical_score": 36.747811
+              }
+            },
+            "score": 0.037822,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p28:c003",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 28,
+            "text": "MP-2.3-001 Assess the accuracy, quality, reliability, and authenticity of GAI output by comparing it to a set of known ground truth data and by using a variety of evaluation methods (e.g., human oversight and automated evaluation, proven cryptographic techniques, review of content inputs).\nInformation Integrity",
+            "metadata": {
+              "section": "map",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p28",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.823453,
+                "lexical_rank": 4,
+                "lexical_score": 17.344923
+              }
+            },
+            "score": 0.037756,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p28:c002",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 28,
+            "text": "Action ID Suggested Action GAI Risks\nMP-2.2-001 Identify and document how the system relies on upstream data sources, including for content provenance, and if it serves as an upstream dependency for other systems.\nInformation Integrity; Value Chain and Component Integration\nMP-2.2-002 Observe and analyze how the GAI system interacts with external networks, and identify any potential for negative externalities, particularly where content provenance might be compromised.\nInformation Integrity\nAI Actor Tasks: End Users\nMAP 2.3: Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation Action ID Suggested Action GAI Risks",
+            "metadata": {
+              "section": "map",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p28",
+              "rrf_detail": {
+                "dense_rank": 7,
+                "dense_score": 0.763496,
+                "lexical_rank": 3,
+                "lexical_score": 18.351083
+              }
+            },
+            "score": 0.036022,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_600_1:B:p29:c001 | starter/data/NIST.AI.600-1.pdf | page 29]\nMP-2.3-002 Review and document accuracy, representativeness, relevance, suitability of data used at different stages of AI life cycle.\nHarmful Bias and Homogenization; Intellectual Property\nMP-2.3-003 Deploy and document fact-checking techniques to verify the accuracy and veracity of information generated by GAI systems, especially when the information comes from multiple (or unknown) sources.\nInformation Integrity\nMP-2.3-004 Develop and implement testing techniques to identify GAI produced content (e.g., synthetic media) that might be indistinguishable from human-generated content. Information Integrity\nMP-2.3-005 Implement plans for GAI systems to undergo regular adversarial testing to identify vulnerabilities and potential manipulation or misuse. Information Security\nAI Actor Tasks: AI Development, Domain Experts, TEVV\n\n[nist_ai_600_1:B:p28:c003 | starter/data/NIST.AI.600-1.pdf | page 28]\nMP-2.3-001 Assess the accuracy, quality, reliability, and authenticity of GAI output by comparing it to a set of known ground truth data and by using a variety of evaluation methods (e.g., human oversight and automated evaluation, proven cryptographic techniques, review of content inputs).\nInformation Integrity\n\n[nist_ai_600_1:B:p28:c002 | starter/data/NIST.AI.600-1.pdf | page 28]\nAction ID Suggested Action GAI Risks\nMP-2.2-001 Identify and document how the system relies on upstream data sources, including for content provenance, and if it serves as an upstream dependency for other systems.\nInformation Integrity; Value Chain and Component Integration\nMP-2.2-002 Observe and analyze how the GAI system interacts with external networks, and identify any potential for negative externalities, particularly where content provenance might be compromised.\nInformation Integrity\nAI Actor Tasks: End Users\nMAP 2.3: Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation Action ID Suggested Action GAI Risks\n\n[nist_ai_600_1:B:p29:c002 | starter/data/NIST.AI.600-1.pdf | page 29]\nMAP 3.4: Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented. Action ID Suggested Action GAI Risks\nMP-3.4-001 Evaluate whether GAI operators and end-users can accurately understand content lineage and origin. Human-AI Configuration; Information Integrity\nMP-3.4-002 Adapt existing training programs to include modules on digital content transparency. Information Integrity\nMP-3.4-003 Develop certification programs that test proficiency in managing GAI risks and interpreting content provenance, relevant to specific industry and context. Information Integrity\nMP-3.4-004 Delineate human proficiency tests from tests of GAI capabilities. Human-AI Configuration",
+        "context_ids": [
+          "nist_ai_600_1:B:p29:c001",
+          "nist_ai_600_1:B:p28:c003",
+          "nist_ai_600_1:B:p28:c002",
+          "nist_ai_600_1:B:p29:c002"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The retrieved context chunk nist_ai_600_1:B:p29:c001 clearly specifies the suggested actions under MP-2.3-003 and MP-2.3-004 to address Information Integrity risks."
+      }
+    ]
+  },
+  {
+    "query_id": "q25",
+    "split": "test",
+    "question": "Under the MEASURE function (MEASURE 2.13), how does MS-2.13-001 recommend demonstrating construct validity for pre-deployment metrics?",
+    "answerable": true,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "Under MEASURE 2.13, action MS-2.13-001 recommends demonstrating construct validity for pre-deployment metrics (i.e., whether the metric effectively operationalizes the desired concept) by creating measurement error models for pre-deployment metrics through the following actions [nist_ai_600_1:B:p42:c001]:\n- Measuring or estimating, and documenting, biases or statistical variance in applied metrics or structured human feedback processes [nist_ai_600_1:B:p42:c001].\n- Leveraging domain expertise when modeling complex societal constructs such as hateful content [nist_ai_600_1:B:p42:c001].",
+    "citations": [
+      "nist_ai_600_1:B:p42:c001"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_600_1:B:p42:c001",
+      "nist_ai_600_1:B:p34:c003",
+      "nist_ai_100_1:B:p35:c002",
+      "nist_ai_600_1:B:p42:c002"
+    ],
+    "final_context_chars": 3110,
+    "context_evidence_hit": true,
+    "elapsed_ms": 7482.88,
+    "llm_calls": 2,
+    "prompt_tokens": 1911,
+    "completion_tokens": 402,
+    "events": [
+      {
+        "event": "search",
+        "query": "MEASURE 2.13 MS-2.13-001 construct validity pre-deployment metrics",
+        "thought": "The user is asking about action MS-2.13-001 under MEASURE 2.13 regarding demonstrating construct validity for pre-deployment metrics. I must search NIST AI 600-1 / 100-1 for MS-2.13-001.",
+        "filter": {
+          "section": "measure"
+        },
+        "results": [
+          {
+            "id": "nist_ai_600_1:B:p42:c001",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 42,
+            "text": "MEASURE 2.13: Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.\nAction ID Suggested Action GAI Risks\nMS-2.13-001 Create measurement error models for pre-deployment metrics to demonstrate construct validity for each metric (i.e., does the metric effectively operationalize the desired concept): Measure or estimate, and document, biases or statistical variance in applied metrics or structured human feedback processes; Leverage domain expertise when modeling complex societal constructs such as hateful content.\nConfabulation; Information Integrity; Harmful Bias and Homogenization\nAI Actor Tasks: AI Deployment, Operation and Monitoring, TEVV\nMEASURE 3.2: Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.",
+            "metadata": {
+              "section": "measure",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p42",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.815465,
+                "lexical_rank": 1,
+                "lexical_score": 43.177384
+              }
+            },
+            "score": 0.038525,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p34:c003",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 34,
+            "text": "MS-2.3-001 Consider baseline model performance on suites of benchmarks when selecting a model for fine tuning or enhancement with retrieval-augmented generation. Information Security; Confabulation\nMS-2.3-002 Evaluate claims of model capabilities using empirically validated methods. Confabulation; Information Security\nMS-2.3-003 Share results of pre-deployment testing with relevant GAI Actors, such as those with system release approval authority. Human-AI Configuration",
+            "metadata": {
+              "section": "measure",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p34",
+              "rrf_detail": {
+                "dense_rank": 3,
+                "dense_score": 0.788848,
+                "lexical_rank": 3,
+                "lexical_score": 14.968394
+              }
+            },
+            "score": 0.037302,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p35:c002",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 35,
+            "text": "MEASURE 2.9: The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance.\nMEASURE 2.10: Privacy risk of the AI system – as identified in the MAP function – is examined and documented.\nMEASURE 2.11: Fairness and bias – as identified in the MAP function – are evaluated and results are documented.\nMEASURE 2.12: Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.\nMEASURE 2.13: Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.\nMEASURE 3:\nMechanisms for tracking identified AI risks over time are in place.",
+            "metadata": {
+              "section": "measure",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p35",
+              "rrf_detail": {
+                "dense_rank": 6,
+                "dense_score": 0.778484,
+                "lexical_rank": 2,
+                "lexical_score": 18.387118
+              }
+            },
+            "score": 0.036584,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_600_1:B:p42:c001 | starter/data/NIST.AI.600-1.pdf | page 42]\nMEASURE 2.13: Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.\nAction ID Suggested Action GAI Risks\nMS-2.13-001 Create measurement error models for pre-deployment metrics to demonstrate construct validity for each metric (i.e., does the metric effectively operationalize the desired concept): Measure or estimate, and document, biases or statistical variance in applied metrics or structured human feedback processes; Leverage domain expertise when modeling complex societal constructs such as hateful content.\nConfabulation; Information Integrity; Harmful Bias and Homogenization\nAI Actor Tasks: AI Deployment, Operation and Monitoring, TEVV\nMEASURE 3.2: Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.\n\n[nist_ai_600_1:B:p34:c003 | starter/data/NIST.AI.600-1.pdf | page 34]\nMS-2.3-001 Consider baseline model performance on suites of benchmarks when selecting a model for fine tuning or enhancement with retrieval-augmented generation. Information Security; Confabulation\nMS-2.3-002 Evaluate claims of model capabilities using empirically validated methods. Confabulation; Information Security\nMS-2.3-003 Share results of pre-deployment testing with relevant GAI Actors, such as those with system release approval authority. Human-AI Configuration\n\n[nist_ai_100_1:B:p35:c002 | starter/data/NIST.AI.100-1.pdf | page 35]\nMEASURE 2.9: The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance.\nMEASURE 2.10: Privacy risk of the AI system – as identified in the MAP function – is examined and documented.\nMEASURE 2.11: Fairness and bias – as identified in the MAP function – are evaluated and results are documented.\nMEASURE 2.12: Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.\nMEASURE 2.13: Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.\nMEASURE 3:\nMechanisms for tracking identified AI risks over time are in place.\n\n[nist_ai_600_1:B:p42:c002 | starter/data/NIST.AI.600-1.pdf | page 42]\nAction ID Suggested Action GAI Risks\nMS-3.2-001 Establish processes for identifying emergent GAI system risks including consulting with external AI Actors. Human-AI Configuration; Confabulation\nAI Actor Tasks: AI Impact Assessment, Domain Experts, Operation and Monitoring, TEVV\nMEASURE 3.3: Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.\nAction ID Suggested Action GAI Risks\nMS-3.3-001 Conduct impact assessments on how AI-generated content might affect different social, economic, and cultural groups. Harmful Bias and Homogenization",
+        "context_ids": [
+          "nist_ai_600_1:B:p42:c001",
+          "nist_ai_600_1:B:p34:c003",
+          "nist_ai_100_1:B:p35:c002",
+          "nist_ai_600_1:B:p42:c002"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The retrieved chunk nist_ai_600_1:B:p42:c001 provides the exact text for MEASURE 2.13 and action MS-2.13-001 detailing how construct validity is demonstrated for pre-deployment metrics."
+      }
+    ]
+  },
+  {
+    "query_id": "u03",
+    "split": "test",
+    "question": "What is the official fee schedule in USD and certificate validity period in years for obtaining an accredited NIST AI RMF 1.0 compliance certification from the U.S. Department of Commerce?",
+    "answerable": false,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "answered",
+    "answer": "The provided NIST AI Risk Management Framework documents (NIST AI 100-1 and NIST AI 600-1) do not contain evidence of an official fee schedule, certificate validity period, or an accredited compliance certification process administered by the U.S. Department of Commerce. Instead, the Framework is explicitly designed to be voluntary, non-sector-specific, and use-case agnostic [nist_ai_100_1:B:p07:c003].",
+    "citations": [
+      "nist_ai_100_1:B:p07:c003"
+    ],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_100_1:B:p19:c001",
+      "nist_ai_100_1:B:p07:c003",
+      "nist_ai_100_1:B:p26:c001",
+      "nist_ai_100_1:B:p19:c002"
+    ],
+    "final_context_chars": 3007,
+    "context_evidence_hit": null,
+    "elapsed_ms": 7357.77,
+    "llm_calls": 2,
+    "prompt_tokens": 1840,
+    "completion_tokens": 322,
+    "events": [
+      {
+        "event": "search",
+        "query": "accredited compliance certification fee schedule validity period Department of Commerce voluntary",
+        "thought": "I need to search the NIST AI RMF documents to check whether there is any accredited compliance certification, fee schedule, or validity period mentioned.",
+        "filter": {
+          "year": 2023
+        },
+        "results": [
+          {
+            "id": "nist_ai_100_1:B:p19:c001",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 19,
+            "text": "Accuracy and robustness contribute to the validity and trustworthiness of AI systems, and can be in tension with one another in AI systems.\nAccuracy is defined by ISO /IEC TS 5723:2022 as “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” Measures of accuracy should consider computational-centric measures (e.g., false positive and false negative rates), human-AI teaming, and demonstrate external validity (generalizable beyond the training conditions). Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology; these should be included in associated documentation. Accuracy measurements may include disaggregation of results for different data segments.",
+            "metadata": {
+              "section": "foundational_information",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p19",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.663476,
+                "lexical_rank": 2,
+                "lexical_score": 5.102164
+              }
+            },
+            "score": 0.03826,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p07:c003",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 7,
+            "text": "As directed by the National Artificial Intelligence Initiative Act of 2020 (P.L. 116-283), the goal of the AI RMF is to offer a resource to the organizations designing, developing, deploying, or using AI systems to help manage the many risks of AI and promote trustworthy and responsible development and use of AI systems. The Framework is intended to be voluntary, rights-preserving, non-sector-specific, and use-case agnostic, providing flexibility to organizations of all sizes and in all sectors and throughout society to implement the approaches in the Framework.",
+            "metadata": {
+              "section": "executive_summary",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p07",
+              "rrf_detail": {
+                "dense_rank": 3,
+                "dense_score": 0.647286,
+                "lexical_rank": 6,
+                "lexical_score": 4.606189
+              }
+            },
+            "score": 0.03658,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_100_1:B:p26:c001",
+            "source_id": "nist_ai_100_1",
+            "source": "starter/data/NIST.AI.100-1.pdf",
+            "page": 26,
+            "text": "deployed, or evaluated – which can create opportunities to surface problems and identify existing and emergent risks.\nAn online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. Like the AI RMF, the Playbook is voluntary and organizations can utilize the suggestions according to their needs and interests. Playbook users can create tailored guidance selected from suggested material for their own use and contribute their suggestions for sharing with the broader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center.",
+            "metadata": {
+              "section": "govern",
+              "year": 2023,
+              "page_id": "nist_ai_100_1_p26",
+              "rrf_detail": {
+                "dense_rank": 13,
+                "dense_score": 0.630931,
+                "lexical_rank": 8,
+                "lexical_score": 4.011364
+              }
+            },
+            "score": 0.033199,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_100_1:B:p19:c001 | starter/data/NIST.AI.100-1.pdf | page 19]\nAccuracy and robustness contribute to the validity and trustworthiness of AI systems, and can be in tension with one another in AI systems.\nAccuracy is defined by ISO /IEC TS 5723:2022 as “closeness of results of observations, computations, or estimates to the true values or the values accepted as being true.” Measures of accuracy should consider computational-centric measures (e.g., false positive and false negative rates), human-AI teaming, and demonstrate external validity (generalizable beyond the training conditions). Accuracy measurements should always be paired with clearly defined and realistic test sets – that are representative of conditions of expected use – and details about test methodology; these should be included in associated documentation. Accuracy measurements may include disaggregation of results for different data segments.\n\n[nist_ai_100_1:B:p07:c003 | starter/data/NIST.AI.100-1.pdf | page 7]\nAs directed by the National Artificial Intelligence Initiative Act of 2020 (P.L. 116-283), the goal of the AI RMF is to offer a resource to the organizations designing, developing, deploying, or using AI systems to help manage the many risks of AI and promote trustworthy and responsible development and use of AI systems. The Framework is intended to be voluntary, rights-preserving, non-sector-specific, and use-case agnostic, providing flexibility to organizations of all sizes and in all sectors and throughout society to implement the approaches in the Framework.\n\n[nist_ai_100_1:B:p26:c001 | starter/data/NIST.AI.100-1.pdf | page 26]\ndeployed, or evaluated – which can create opportunities to surface problems and identify existing and emergent risks.\nAn online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. Like the AI RMF, the Playbook is voluntary and organizations can utilize the suggestions according to their needs and interests. Playbook users can create tailored guidance selected from suggested material for their own use and contribute their suggestions for sharing with the broader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center.\n\n[nist_ai_100_1:B:p19:c002 | starter/data/NIST.AI.100-1.pdf | page 19]\nRobustness or generalizability is defined as the “ability of a system to maintain its level of performance under a variety of circumstances” (Source: ISO /IEC TS 5723:2022). Robustness is a goal for appropriate system functionality in a broad set of conditions and circumstances, including uses of AI systems not initially anticipated. Robustness requires not only that the system perform exactly as it does under expected uses, but also that it should perform in ways that minimize potential harms to people if it is operating in an unexpected setting.",
+        "context_ids": [
+          "nist_ai_100_1:B:p19:c001",
+          "nist_ai_100_1:B:p07:c003",
+          "nist_ai_100_1:B:p26:c001",
+          "nist_ai_100_1:B:p19:c002"
+        ]
+      },
+      {
+        "event": "answer",
+        "thought": "The user is asking about an official fee schedule in USD and certificate validity period for obtaining an accredited NIST AI RMF 1.0 compliance certification from the U.S. Department of Commerce. As explicitly noted in rule 3, topics like compliance certification fees or mandatory certifications are not present in the NIST AI RMF corpus; furthermore, NIST AI RMF is voluntary. The provided documents do not contain evidence of any fee schedule or certification validity period."
+      }
+    ]
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "question": "In NIST AI 600-1, what exact minimum benchmark percentage scores on MMLU and GSM8K are mandated before a generative AI model is permitted for clinical healthcare deployment?",
+    "answerable": false,
+    "config_name": "agent_improve2_hybrid_smart_b3200",
+    "model": "gemini-3.8-flash",
+    "status": "abstain",
+    "answer": "The provided NIST AI documents (NIST AI 100-1 and NIST AI 600-1) do not mandate any specific minimum benchmark percentage scores on MMLU, GSM8K, or any other benchmark for clinical healthcare deployment, nor do they prescribe such regulatory cutoffs.",
+    "citations": [],
+    "num_searches": 1,
+    "final_context_ids": [
+      "nist_ai_600_1:B:p53:c002",
+      "nist_ai_600_1:B:p40:c001",
+      "nist_ai_600_1:B:p40:c004"
+    ],
+    "final_context_chars": 2453,
+    "context_evidence_hit": null,
+    "elapsed_ms": 7309.25,
+    "llm_calls": 2,
+    "prompt_tokens": 1686,
+    "completion_tokens": 209,
+    "events": [
+      {
+        "event": "search",
+        "query": "MMLU GSM8K benchmark percentage clinical healthcare",
+        "thought": "Need to search NIST AI 600-1 for mentions of MMLU, GSM8K, and clinical healthcare deployment benchmark requirements.",
+        "filter": {
+          "year": 2024
+        },
+        "results": [
+          {
+            "id": "nist_ai_600_1:B:p53:c002",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 53,
+            "text": "Similarly, jailbreaking or prompt engineering tests may not systematically assess validity or reliability risks.\nMeasurement gaps can arise from mismatches between laboratory and real-world settings. Current testing approaches often remain focused on laboratory conditions or restricted to benchmark test datasets and in silico techniques that may not extrapolate well to—or directly assess GAI impacts in realworld conditions. For example, current measurement gaps for GAI make it difficult to precisely estimate its potential ecosystem-level or longitudinal risks and related political, social, and economic impacts. Gaps between benchmarks and real-world use of GAI systems may likely be exacerbated due to prompt sensitivity and broad heterogeneity of contexts of use.",
+            "metadata": {
+              "section": "appendix",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p53",
+              "rrf_detail": {
+                "dense_rank": 3,
+                "dense_score": 0.694045,
+                "lexical_rank": 4,
+                "lexical_score": 3.923053
+              }
+            },
+            "score": 0.037054,
+            "rank": 1,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p40:c001",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 40,
+            "text": "MEASURE 2.11: Fairness and bias – as identified in the MAP function – are evaluated and results are documented. Action ID Suggested Action GAI Risks\nMS-2.11-001 Apply use-case appropriate benchmarks (e.g., Bias Benchmark Questions, Real Hateful or Harmful Prompts, Winogender Schemas15) to quantify systemic bias, stereotyping, denigration, and hateful content in GAI system outputs; Document assumptions and limitations of benchmarks, including any actual or possible training/test data cross contamination, relative to in-context deployment environment.\nHarmful Bias and Homogenization",
+            "metadata": {
+              "section": "measure",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p40",
+              "rrf_detail": {
+                "dense_rank": 6,
+                "dense_score": 0.689449,
+                "lexical_rank": 3,
+                "lexical_score": 4.425843
+              }
+            },
+            "score": 0.036328,
+            "rank": 2,
+            "strategy": "hybrid_rrf"
+          },
+          {
+            "id": "nist_ai_600_1:B:p40:c004",
+            "source_id": "nist_ai_600_1",
+            "source": "starter/data/NIST.AI.600-1.pdf",
+            "page": 40,
+            "text": "MS-2.11-004 Review, document, and measure sources of bias in GAI training and TEVV data: Differences in distributions of outcomes across and within groups, including intersecting groups; Completeness, representativeness, and balance of data sources; demographic group and subgroup coverage in GAI system training data; Forms of latent systemic bias in images, text, audio, embeddings, or other complex or unstructured data; Input data features that may serve as proxies for demographic group membership (i.e., image metadata, language dialect) or otherwise give rise to emergent bias within GAI systems; The extent to which the digital divide may negatively impact representativeness in GAI system training and TEVV data; Filtering of hate speech or content in GAI system training data; Prevalence of GAI-generated data in GAI system training data. Harmful Bias and Homogenization",
+            "metadata": {
+              "section": "measure",
+              "year": 2024,
+              "page_id": "nist_ai_600_1_p40",
+              "rrf_detail": {
+                "dense_rank": 1,
+                "dense_score": 0.713352,
+                "lexical_rank": null,
+                "lexical_score": null
+              }
+            },
+            "score": 0.022131,
+            "rank": 3,
+            "strategy": "hybrid_rrf"
+          }
+        ],
+        "context": "[nist_ai_600_1:B:p53:c002 | starter/data/NIST.AI.600-1.pdf | page 53]\nSimilarly, jailbreaking or prompt engineering tests may not systematically assess validity or reliability risks.\nMeasurement gaps can arise from mismatches between laboratory and real-world settings. Current testing approaches often remain focused on laboratory conditions or restricted to benchmark test datasets and in silico techniques that may not extrapolate well to—or directly assess GAI impacts in realworld conditions. For example, current measurement gaps for GAI make it difficult to precisely estimate its potential ecosystem-level or longitudinal risks and related political, social, and economic impacts. Gaps between benchmarks and real-world use of GAI systems may likely be exacerbated due to prompt sensitivity and broad heterogeneity of contexts of use.\n\n[nist_ai_600_1:B:p40:c001 | starter/data/NIST.AI.600-1.pdf | page 40]\nMEASURE 2.11: Fairness and bias – as identified in the MAP function – are evaluated and results are documented. Action ID Suggested Action GAI Risks\nMS-2.11-001 Apply use-case appropriate benchmarks (e.g., Bias Benchmark Questions, Real Hateful or Harmful Prompts, Winogender Schemas15) to quantify systemic bias, stereotyping, denigration, and hateful content in GAI system outputs; Document assumptions and limitations of benchmarks, including any actual or possible training/test data cross contamination, relative to in-context deployment environment.\nHarmful Bias and Homogenization\n\n[nist_ai_600_1:B:p40:c004 | starter/data/NIST.AI.600-1.pdf | page 40]\nMS-2.11-004 Review, document, and measure sources of bias in GAI training and TEVV data: Differences in distributions of outcomes across and within groups, including intersecting groups; Completeness, representativeness, and balance of data sources; demographic group and subgroup coverage in GAI system training data; Forms of latent systemic bias in images, text, audio, embeddings, or other complex or unstructured data; Input data features that may serve as proxies for demographic group membership (i.e., image metadata, language dialect) or otherwise give rise to emergent bias within GAI systems; The extent to which the digital divide may negatively impact representativeness in GAI system training and TEVV data; Filtering of hate speech or content in GAI system training data; Prevalence of GAI-generated data in GAI system training data. Harmful Bias and Homogenization",
+        "context_ids": [
+          "nist_ai_600_1:B:p53:c002",
+          "nist_ai_600_1:B:p40:c001",
+          "nist_ai_600_1:B:p40:c004"
+        ]
+      },
+      {
+        "event": "abstain_or_missing_citations",
+        "thought": "The previous search showed that NIST documents do not mandate specific benchmark percentages on MMLU or GSM8K for clinical healthcare deployment. NIST AI RMF is a voluntary framework and does not set mandatory benchmark percentage scores."
+      }
+    ]
+  }
+]

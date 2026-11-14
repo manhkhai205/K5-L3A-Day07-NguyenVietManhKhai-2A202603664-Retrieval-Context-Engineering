@@ -1,0 +1,46 @@
+[
+  {
+    "query_id": "q21",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "Baseline abstained because budget=800 dropped all top-3 chunks (including gold chunk p17:c002 of 878 chars) from context."
+  },
+  {
+    "query_id": "q22",
+    "answer_grade": 1,
+    "citation_support": [
+      true
+    ],
+    "reason": "Partially grounded (1/2): correctly answered the second part about PETs and accuracy loss under data sparsity using [nist_ai_100_1:B:p22:c003] (533 chars fit budget=800), and explicitly stated insufficient evidence for the first part (p17:c003 of 841 chars was dropped)."
+  },
+  {
+    "query_id": "q23",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "Baseline abstained because gold chunk nist_ai_600_1:B:p15:c002 (797 chars + 80 char header > 800) was dropped from context."
+  },
+  {
+    "query_id": "q24",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "Baseline abstained because context was empty after budget=800 dropped all top-3 chunks including gold chunk p29:c001 (833 chars)."
+  },
+  {
+    "query_id": "q25",
+    "answer_grade": 0,
+    "citation_support": [],
+    "reason": "Baseline abstained because gold chunk p42:c001 (898 chars) exceeded budget=800 and was dropped, leaving only irrelevant p16:c005."
+  },
+  {
+    "query_id": "u03",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Correctly abstained after 2 searches without fabricating compliance certification fees or validity periods."
+  },
+  {
+    "query_id": "u04",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Correctly abstained after 2 searches without fabricating MMLU/GSM8K healthcare thresholds."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "query_id": "q21",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Complete and accurate: explains Valid & Reliable as necessary base condition and Accountable & Transparent as vertical box relating to all characteristics; directly supported by [nist_ai_100_1:B:p17:c002]."
+  },
+  {
+    "query_id": "q22",
+    "answer_grade": 2,
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Complete and accurate: covers tradeoffs, applicability, and weakest-characteristic principle from [nist_ai_100_1:B:p17:c003] plus data sparsity accuracy loss with PETs from [nist_ai_100_1:B:p17:c003] and [nist_ai_100_1:B:p22:c003]."
+  },
+  {
+    "query_id": "q23",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Complete and accurate: distinguishes direct prompt injection vs remote indirect prompt injection via retrieved data (stealing data/running malicious code); directly supported by [nist_ai_600_1:B:p15:c002]."
+  },
+  {
+    "query_id": "q24",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Complete and accurate: reproduces both MP-2.3-003 (fact-checking techniques) and MP-2.3-004 (testing to identify GAI-produced synthetic content); directly supported by [nist_ai_600_1:B:p29:c001]."
+  },
+  {
+    "query_id": "q25",
+    "answer_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "Complete and accurate: covers measurement error models, documenting biases/variance in metrics and human feedback, and domain expertise for complex societal constructs; directly supported by [nist_ai_600_1:B:p42:c001]."
+  },
+  {
+    "query_id": "u03",
+    "citation_support": [
+      true
+    ],
+    "abstention_correct": false,
+    "reason": "Nuanced edge case: semantically the agent refused the certification fee/validity period claim as absent and cited [nist_ai_100_1:B:p07:c003] to support that the AI RMF is voluntary; however, because a citation was attached, starter/agentic.py set status='answered' instead of 'abstain', so strict status-matched abstention_correct must be recorded as false per starter/agent_metrics.py."
+  },
+  {
+    "query_id": "u04",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "Correctly abstained with status='abstain' and empty citations, clearly stating NIST AI 100-1/600-1 do not mandate MMLU or GSM8K cutoffs."
+  }
+]
